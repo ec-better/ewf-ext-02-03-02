@@ -11,3 +11,5 @@
 temp/
 *_NDVI.xml
 *.TIF.properties
+*.png
+*.xlsx
