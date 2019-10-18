@@ -121,10 +121,10 @@ ciop = cioppy.Cioppy()"""))
     for reference in references:
       
       code.append(nbf.v4.new_code_cell('reference = "' + reference + '"'))
-      code.append(nbf.v4.new_code_cell("search = ciop.search(end_point = reference, params = [], output_fields='enclosure,identifier', model='GeoTime',creds='{}:{}'.format(ndvi_index,ndvi_apikey))"))
+      code.append(nbf.v4.new_code_cell("search = ciop.search(end_point = reference, params = [], output_fields='enclosure,identifier', model='GeoTime',creds='{}:{}'.format(ndviIndex,ndviApikey))"))
       
       code.append(nbf.v4.new_code_cell("parsed_url = urlparse(search[0]['enclosure'])")) #
-      code.append(nbf.v4.new_code_cell("durl = '%s://%s:%s@%s%s' % (list(parsed_url)[0], ndvi_index, ndvi_apikey, list(parsed_url)[1], list(parsed_url)[2])")) #
+      code.append(nbf.v4.new_code_cell("durl = '%s://%s:%s@%s%s' % (list(parsed_url)[0], ndviIndex, ndviApikey, list(parsed_url)[1], list(parsed_url)[2])")) #
       code.append(nbf.v4.new_code_cell("retrieved = ciop.copy(durl, tmp_dir)")) #
      
       code.append(nbf.v4.new_code_cell("assert(retrieved)"))
@@ -139,11 +139,11 @@ def stage_in():
     for reference in references:
       ciop.log('INFO', 'The input reference is: ' + reference)    
          
-      search = ciop.search(end_point = reference, params = [], output_fields='enclosure,identifier', model='GeoTime',creds='{}:{}'.format(ndvi_index,ndvi_apikey))
+      search = ciop.search(end_point = reference, params = [], output_fields='enclosure,identifier', model='GeoTime',creds='{}:{}'.format(ndviIndex,ndviApikey))
       assert(search), sys.exit(ERR_RESOLUTION)
 
       parsed_url = urlparse(search[0]['enclosure'])
-      durl = '%s://%s:%s@%s%s' % (list(parsed_url)[0], ndvi_index, ndvi_apikey, list(parsed_url)[1], list(parsed_url)[2])   
+      durl = '%s://%s:%s@%s%s' % (list(parsed_url)[0], ndviIndex, ndviApikey, list(parsed_url)[1], list(parsed_url)[2])   
       ciop.log('INFO', 'Retrieve %s from %s' % (search[0]['identifier'], durl))
       retrieved = ciop.copy(durl, tmp_dir)
 
@@ -215,11 +215,11 @@ def main():
     for reference in sys.stdin:
       references.append(reference.rstrip())
     
-    global ndvi_index
-    global ndvi_apikey
+    global ndviIndex
+    global ndviApikey
     
-    ndvi_index = ciop.getparam('ndvi_index')
-    ndvi_apikey = ciop.getparam('ndvi_apikey')
+    ndviIndex = ciop.getparam('ndviIndex')
+    ndviApikey = ciop.getparam('ndviApikey')
 
     
     # stage-in the data
