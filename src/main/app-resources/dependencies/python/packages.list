@@ -1,4 +1,3 @@
-WARNING conda.gateways.disk.delete:unlink_or_rename_to_trash(140): Could not remove or rename /opt/anaconda/conda-meta/get_terminal_size-1.0.0-py27_0.json.  Please remove this file manually (you may need to reboot to free file handles)
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: linux-64
