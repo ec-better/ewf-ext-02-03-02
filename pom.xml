@@ -8,10 +8,10 @@
   <parent>
     <groupId>com.terradue</groupId>
     <artifactId>dcs-python-parent</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.1-docker</version>
   </parent>
   <description>NDVI growing season statistics time series per pixel</description>
-  <version>0.1</version>
+  <version>0.2</version>
   <properties>
     <summary>NDVI growing season statistics time series per pixel</summary>
     <description>NDVI growing season statistics time series per pixel</description>
@@ -112,7 +112,7 @@
                     <require>snap6</require>
                   </requires>
                   <postinstallScriptlet combine.self="override">
-                    <script>conda update conda -y &amp;&amp; conda install -y --file /application/dependencies/python/packages.list &amp;&amp; cp /application/notebook/etc/snappy.ini /opt/anaconda/lib/python2.7/site-packages/snappy/snappy.ini</script>
+                    <script>conda update conda -y &amp;&amp; conda update conda -y &amp;&amp; conda config --prepend channels anaconda &amp;&amp; conda install -y --file /application/dependencies/python/packages.list &amp;&amp; cp /application/notebook/etc/snappy.ini /opt/anaconda/lib/python2.7/site-packages/snappy/snappy.ini</script>
                   </postinstallScriptlet>
                 </configuration>
               </execution>
