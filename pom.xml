@@ -11,7 +11,7 @@
     <version>3.0.1-docker</version>
   </parent>
   <description>NDVI growing season statistics time series per pixel</description>
-  <version>0.7</version>
+  <version>0.8</version>
   <properties>
     <summary>NDVI growing season statistics time series per pixel</summary>
     <description>NDVI growing season statistics time series per pixel</description>
