@@ -11,7 +11,7 @@
     <version>2.0.0</version>
   </parent>
   <description>NDVI growing season statistics time series per pixel</description>
-  <version>0.11</version>
+  <version>0.12</version>
   <properties>
     <summary>NDVI growing season statistics time series per pixel</summary>
     <description>NDVI growing season statistics time series per pixel</description>
