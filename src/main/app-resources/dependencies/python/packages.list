@@ -90,13 +90,14 @@ futures=3.3.0=py27_0
 gdal=2.2.2=py27h3e23360_2
 geopandas=0.4.1=py_0
 geos=3.5.0=0
+get_terminal_size=1.0.0=haa9412d_0
 gevent=1.4.0=py27h7b6447c_0
 git=2.14.1=pl526h58e4575_2
 gitdb2=2.0.0=py27_0
 gitpython=2.1.3=py27_0
 glib=2.50.2=1
 glob2=0.7=py_0
-glymur=0.8.6=py27_0
+glymur=0.8.6=pypi_0
 gmp=6.1.2=h6c8ec71_1
 gmpy2=2.0.8=py27h10f8cd9_2
 graphite2=1.3.13=h23475e2_0
@@ -240,6 +241,7 @@ ptyprocess=0.5.1=py27_0
 py=1.4.31=py27_0
 py-lief=0.9.0=py27h7725739_2
 py_earthquakes=0.0.10=py27h32d85c1_0
+py_snap_helpers=0.0.3=py27he0fa7cd_0
 pyasn1=0.1.9=py27_0
 pycairo=1.10.0=py27_0
 pycodestyle=2.5.0=py27_0
